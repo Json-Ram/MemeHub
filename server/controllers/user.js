@@ -13,16 +13,27 @@ export const update = async (req, res, next) => {
         { new: true}
       );
       res.status(200).json(updatedUser)
-    }catch {
-      
+    }catch (err) {
+      next(err);
     }
   }else {
-    return next(createError(403, "Forbidden action"))
+    return next(createError(403, "Forbidden action(Updating user)"))
   }
 }
 
-export const remove = (req, res, next) => {
-  
+export const remove = async (req, res, next) => {
+  if (req.params.id === req.user.id) {
+    try {
+      await User.findByIdAndDelete(
+        req.params.id
+      );
+      res.status(200).json("User has been deleted")
+    }catch (err) {
+      next(err);
+    }
+  }else {
+    return next(createError(403, "Forbidden action(Deleting user)"))
+  }
 }
 
 export const getUser = (req, res, next) => {
