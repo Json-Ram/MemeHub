@@ -36,19 +36,39 @@ export const remove = async (req, res, next) => {
   }
 }
 
-export const getUser = (req, res, next) => {
-  
+export const getUser = async (req, res, next) => {
+  try {
+
+  }catch(err) {
+    next(err)
+  }
 }
-export const subscribe = (req, res, next) => {
-  
+export const subscribe = async (req, res, next) => {
+  try {
+
+  }catch(err) {
+    next(err)
+  }
 }
-export const unsubscribe = (req, res, next) => {
-  
+export const unsubscribe = async (req, res, next) => {
+  try {
+
+  }catch(err) {
+    next(err)
+  }
 }
-export const like = (req, res, next) => {
-  
+export const like = async(req, res, next) => {
+  try {
+
+  }catch(err) {
+    next(err)
+  }
 }
 
-export const dislike = (req, res, next) => {
-  
+export const dislike = async (req, res, next) => {
+  try {
+
+  }catch(err) {
+    next(err)
+  }
 }
