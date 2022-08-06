@@ -16,5 +16,17 @@ router.delete("/:id", verifyToken, deleteVideo);
 // Find video
 router.get("/find/:id", getVideo);
 
+// Views of video
+router.put("/views/:id", getVideo);
+
+// Trending videos
+router.get("/trending", getVideo);
+
+// Random videos
+router.get("/random", getVideo);
+
+// Subcribed to videos
+router.get("/subscribed", getVideo);
+
 
 export default router;
