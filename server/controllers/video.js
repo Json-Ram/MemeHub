@@ -1,6 +1,6 @@
 import { createError } from "../error.js";
 import User from "../models/User.js";
-import Video from "../models/Video.js"
+import Video from "../models/Video.js";
 
 export const addVideo = async (req, res, next) => {
   const newVideo = new Video({ userId: req.user.id, ...req.body });
@@ -8,7 +8,7 @@ export const addVideo = async (req, res, next) => {
     const savedVideo = await newVideo.save()
     res.status(200).json(savedVideo)
   }catch(err) {
-    next(err)
+    next(err);
   }
 }
 
@@ -33,7 +33,7 @@ export const updateVideo = async (req, res, next) => {
     }
 
   }catch(err) {
-    next(err)
+    next(err);
   }
 }
 
@@ -54,7 +54,7 @@ export const deleteVideo = async (req, res, next) => {
     }
 
   }catch(err) {
-    next(err)
+    next(err);
   }
 }
 
@@ -63,7 +63,7 @@ export const getVideo = async (req, res, next) => {
     const video = await Video.findById(req.params.id);
     res.status(200).json(video)
   }catch(err) {
-    next(err)
+    next(err);
   }
 }
 
@@ -74,16 +74,16 @@ export const addView = async (req, res, next) => {
     })
     res.status(200).json("Video has been viewed")
   }catch(err) {
-    next(err)
+    next(err);
   }
 }
 
 export const randomVideo = async (req, res, next) => {
   try {
-    const video = await Video.aggregate([{ $sample:{ size: 40 } }]);
+    const video = await Video.aggregate([{ $sample:{ size: 1 } }]);
     res.status(200).json(video)
   }catch(err) {
-    next(err)
+    next(err);
   }
 }
 
@@ -92,7 +92,7 @@ export const trendingVideo = async (req, res, next) => {
     const videos = await Video.find().sort({ views: -1 });
     res.status(200).json(videos)
   }catch(err) {
-    next(err)
+    next(err);
   }
 }
 
@@ -101,15 +101,38 @@ export const subscribedVideo = async (req, res, next) => {
     const user = await User.findById(req.user.id);
     const subscribedChannels = user.subscribed;
 
-    const list = Promise.all(
+    const list = await Promise.all(
       subscribedChannels.map(channelId => {
         return Video.find({ userId: channelId})
       })
     )
 
-    res.status(200).json(list);
+    res.status(200).json(list.flat().sort((a, b) => b.createdAt - a.createdAt));
   }catch(err) {
-    next(err)
+    next(err);
+  }
+}
+
+export const getByTag = async (req, res, next) => {
+  const tags = req.query.tags.split(",");
+  console.log(tags)
+  try {
+    const videos = await Video.find({ tags: { $in: tags } }).limit(20);
+    res.status(200).json(videos)
+  }catch(err) {
+    next(err);
+  }
+}
+
+export const searchVideos = async (req, res, next) => {
+  const query = req.query.q;
+  try {
+    const videos = await Video.find({
+      title: { $regex: query, $options: "i" }
+    }).limit(40);
+    res.status(200).json(videos)
+  }catch(err) {
+    next(err);
   }
 }
 
