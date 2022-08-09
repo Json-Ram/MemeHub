@@ -15,9 +15,9 @@ import LightModeIcon from '@mui/icons-material/LightMode';
 
 const Container = styled.div`
   flex: 1;
-  background-color: #202020;
+  background-color: ${({theme}) =>theme.bg};
   height: 100vh;
-  color: white;
+  color: ${({theme}) =>theme.text};
   font-size: 12px;
   position: sticky;
   top: 0;
@@ -49,7 +49,7 @@ const Item = styled.div`
 
 const Hr = styled.div`
   margin: 15px 0px;
-  border: 0.5px solid #373737;
+  border: 0.5px solid ${({theme}) =>theme.soft};
 `;
 
 const Login = styled.div`
@@ -70,7 +70,14 @@ const Button = styled.button`
   gap: 5px;
 `;
 
-const Menu = () => {
+//const Title = styled.h2`
+//  font-size: 12px;
+//  font-weight: 500;
+//  color: #aaaaaa;
+//  margin-bottm: 20px;
+//`;
+
+const Menu = ({darkMode, setDarkMode}) => {
   return (
     <Container>
       <Wrapper>
@@ -120,7 +127,7 @@ const Menu = () => {
           <ContactSupportIcon />
           Help
         </Item>
-        <Item>
+        <Item onClick={()=>setDarkMode(!darkMode)}>
           <LightModeIcon />
           Light Mode
         </Item>
