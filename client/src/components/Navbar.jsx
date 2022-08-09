@@ -16,12 +16,12 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: flex-end;
   height: 100%;
-  padding: 0px 20px;
+  padding: 10px 20px;
   position: relative;
 `;
 
 const Search = styled.div`
-  width: 40%;
+  width: 25%;
   position: absolute;
   left: 0;
   right: 0;
@@ -30,14 +30,14 @@ const Search = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 5px;
-  border: 1px solid grey;
+  border: 1.5px solid grey;
   border-radius: 3px;
 `;
 
 const Input = styled.input`
   border: none;
   background-color: transparent;
-
+  outline: none;
 `;
 
 const Button = styled.button`
