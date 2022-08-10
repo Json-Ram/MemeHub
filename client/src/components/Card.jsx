@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -53,6 +54,7 @@ const Info = styled.div`
 
 const Card = () => {
   return (
+    <Link to="/video/test" style={{textDecoration:"none"}}>
     <Container>
       <Image src="https://images.unsplash.com/photo-1485846234645-a62644f84728?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1159&q=80"/>
       <Details>
@@ -64,6 +66,7 @@ const Card = () => {
         </Text>
       </Details>
     </Container>
+    </Link>
   )
 }
 

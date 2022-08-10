@@ -12,6 +12,7 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import FlagIcon from '@mui/icons-material/Flag';
 import ContactSupportIcon from '@mui/icons-material/ContactSupport';
 import LightModeIcon from '@mui/icons-material/LightMode';
+import { Link } from 'react-router-dom';
 
 const Container = styled.div`
   flex: 1;
@@ -81,11 +82,13 @@ const Menu = ({darkMode, setDarkMode}) => {
   return (
     <Container>
       <Wrapper>
+      <Link to="/" style={{textDecoration:"none", color:"inherit"}}>
         <Logo>
           <Img src=""/>
           <DirectionsRunIcon />
           MemeHub
         </Logo>
+        </Link>
         <Item>
           <ApartmentIcon />
           Home
