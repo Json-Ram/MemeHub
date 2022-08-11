@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-//import memeHub from "../img/memeHub.png";
 import ApartmentIcon from '@mui/icons-material/Apartment';
 import FaceIcon from '@mui/icons-material/Face';
 import DirectionsRunIcon from '@mui/icons-material/DirectionsRun';
