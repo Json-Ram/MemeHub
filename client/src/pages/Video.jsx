@@ -1,9 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
+import ThumbUpIcon from '@mui/icons-material/ThumbUp';
+import ThumbDownIcon from '@mui/icons-material/ThumbDown';
+import QuickreplyIcon from '@mui/icons-material/Quickreply';
+import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd';
 
 const Container = styled.div`
   display: flex;
   gap: 24px;
+  margin-left: 20px;
 `;
 
 const Content = styled.div`
@@ -11,7 +16,7 @@ const Content = styled.div`
 `;
 
 const VideoWrapper = styled.div`
-
+  
 `;
 
 const Title = styled.div`
@@ -23,7 +28,7 @@ const Title = styled.div`
 `;
 
 const Details = styled.div`
-  diplay: flex;
+  display: flex;
   align-items: center;
   justify-content: space-between;
 `;
@@ -32,14 +37,77 @@ const Info = styled.span`
   color: ${({ theme }) => theme.textSoft};
 `;
 
-const Buttons = styled.div``;
+const Buttons = styled.div`
+  display: flex;
+  gap: 20px;
+  color: ${({ theme }) => theme.text};
+`;
 
 const Button = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
   
+`;
+
+const Hr = styled.hr`
+  margin: 15px 0px;
+  border: 1px solid ${({ theme }) => theme.soft};
 `;
 
 const Recommended = styled.div`
   flex: 2;
+`;
+
+const Channel = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+
+const ChannelInfo = styled.div`
+  display: flex;
+  gap: 20px;
+`;
+
+const ChannelImage = styled.img`
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+`;
+
+const ChannelDetails = styled.div`
+  display: flex;
+  flex-direction: column;
+  color: ${({ theme }) => theme.text};
+`;
+
+const ChannelName = styled.span`
+  font-weight: 500;
+`;
+
+const ChannelCounter = styled.span`
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: ${({ theme }) => theme.textSoft};
+  font-size: 10px;
+`;
+
+const Description = styled.p`
+  font-size: 12px;
+`;
+
+
+const Subscribe = styled.button`
+  background-color: red;
+  font-weight: 500;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  height: max-content;
+  padding: 10px 15px;
+  cursor: pointer;
 `;
 
 
@@ -62,15 +130,29 @@ const Video = () => {
         <Details>
           <Info> 7,045,349 views ~ Aug 11, 2022</Info>
           <Buttons>
-            <Button>button</Button>
-            <Button>button</Button>
-            <Button>button</Button>
-            <Button>button</Button>
+            <Button><ThumbUpIcon /> 12K</Button>
+            <Button><ThumbDownIcon />Dislike</Button>
+            <Button><QuickreplyIcon />Comment</Button>
+            <Button><PlaylistAddIcon />Save</Button>
           </Buttons>
         </Details>
+        <Hr />
+        <Channel>
+          <ChannelInfo>
+            <ChannelImage src="https://images.unsplash.com/photo-1593104547489-5cfb3839a3b5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1153&q=80"/>
+            <ChannelDetails>
+            <ChannelName>Sarah Lambert</ChannelName>
+            <ChannelCounter>755K Subscribers</ChannelCounter>
+            <Description>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas fugit nemo rem voluptate, vero dolores iste. Et voluptates nisi, minima quaerat ipsa autem deserunt, accusamus dolore rem voluptas itaque. Perspiciatis!
+            </Description>
+            </ChannelDetails>
+          </ChannelInfo>
+          <Subscribe>Subscribe</Subscribe>
+        </Channel>
       </Content>
       <Recommended>
-        recommendations
+        Recommendations
       </Recommended>
     </Container>
   )
