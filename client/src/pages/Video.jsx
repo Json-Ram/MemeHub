@@ -4,6 +4,7 @@ import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 import ThumbDownIcon from '@mui/icons-material/ThumbDown';
 import QuickreplyIcon from '@mui/icons-material/Quickreply';
 import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd';
+import Comments from '../components/Comments';
 
 const Container = styled.div`
   display: flex;
@@ -150,6 +151,8 @@ const Video = () => {
           </ChannelInfo>
           <Subscribe>Subscribe</Subscribe>
         </Channel>
+        <Hr />
+        <Comments />
       </Content>
       <Recommended>
         Recommendations
