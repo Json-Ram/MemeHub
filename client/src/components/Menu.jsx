@@ -45,6 +45,10 @@ const Item = styled.div`
   gap: 20px;
   cursor: pointer;
   padding: 7.5px 0px;
+
+  &:hover {
+    background-color: ${({ theme }) => theme.soft};
+  }
 `;
 
 const Hr = styled.div`
@@ -59,8 +63,8 @@ const Login = styled.div`
 const Button = styled.button`
   padding: 5px 15px;
   background-color: transparent;
-  border: 1px solid green;
-  color: green;
+  border: 1px solid orange;
+  color: orange;
   border-radius: 3px;
   font-weight: 500;
   margin-top: 10px;

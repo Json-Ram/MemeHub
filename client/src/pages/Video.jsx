@@ -5,11 +5,12 @@ import ThumbDownIcon from '@mui/icons-material/ThumbDown';
 import QuickreplyIcon from '@mui/icons-material/Quickreply';
 import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd';
 import Comments from '../components/Comments';
+import Card from '../components/Card';
 
 const Container = styled.div`
   display: flex;
   gap: 24px;
-  margin-left: 20px;
+  margin: 30px;
 `;
 
 const Content = styled.div`
@@ -101,7 +102,7 @@ const Description = styled.p`
 
 
 const Subscribe = styled.button`
-  background-color: red;
+  background-color: orange;
   font-weight: 500;
   color: white;
   border: none;
@@ -155,7 +156,14 @@ const Video = () => {
         <Comments />
       </Content>
       <Recommended>
-        Recommendations
+        <Card type="sm" />
+        <Card type="sm" />
+        <Card type="sm" />
+        <Card type="sm" />
+        <Card type="sm" />
+        <Card type="sm" />
+        <Card type="sm" />
+        <Card type="sm" />
       </Recommended>
     </Container>
   )

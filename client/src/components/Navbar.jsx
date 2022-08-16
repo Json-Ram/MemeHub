@@ -9,6 +9,7 @@ const Container = styled.div`
   top: 0;
   background-color: ${({ theme }) => theme.bgLighter};
   height: 65px;
+  padding: 0px 20px;
 `;
 
 const Wrapper = styled.div`
@@ -38,13 +39,15 @@ const Input = styled.input`
   border: none;
   background-color: transparent;
   outline: none;
+  color: ${({ theme }) => theme.text};
+  width: 100%;
 `;
 
 const Button = styled.button`
   padding: 5px 15px;
   background-color: transparent;
-  border: 1px solid green;
-  color: green;
+  border: 1px solid orange;
+  color: orange;
   border-radius: 3px;
   font-weight: 500;
   cursor: pointer;
