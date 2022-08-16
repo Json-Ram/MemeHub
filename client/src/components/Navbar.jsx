@@ -7,8 +7,8 @@ import LocationSearchingIcon from '@mui/icons-material/LocationSearching';
 const Container = styled.div`
   position: sticky;
   top: 0;
-  background-color: ${({ theme }) => theme.bgLighter}
-  height: 56px;
+  background-color: ${({ theme }) => theme.bgLighter};
+  height: 65px;
 `;
 
 const Wrapper = styled.div`
@@ -16,7 +16,6 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: flex-end;
   height: 100%;
-  padding: 10px 20px;
   position: relative;
 `;
 
@@ -32,6 +31,7 @@ const Search = styled.div`
   padding: 5px;
   border: 1.5px solid grey;
   border-radius: 3px;
+  color: ${({theme}) =>theme.text};
 `;
 
 const Input = styled.input`
