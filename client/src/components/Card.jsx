@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Container = styled.div`
-  width: ${(props) => props.type !== "sm" && "330px"};
+  width: ${(props) => props.type !== "sm" && "331px"};
   margin: ${(props) => props.type === "sm" ? "10px" : "20px"};
   cursor: pointer;
   display: ${(props) => props.type === "sm" && "flex"};

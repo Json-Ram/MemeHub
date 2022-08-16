@@ -92,10 +92,12 @@ const Menu = ({darkMode, setDarkMode}) => {
           MemeHub
         </Logo>
         </Link>
+        <Link to="/" style={{textDecoration:"none", color:"inherit"}}>
         <Item>
           <ApartmentIcon />
           Home
         </Item>
+        </Link>
         <Item>
           <TravelExploreIcon />
           Explore
@@ -115,10 +117,12 @@ const Menu = ({darkMode, setDarkMode}) => {
         <Hr />
         <Login>
           Sign in to like videos, comment and subscribe.
+          <Link to="login" style={{textDecoration: "none"}}>
           <Button>
             <FaceIcon />
             Sign In
           </Button>
+          </Link>
         </Login>
         <Hr />
         <Item>

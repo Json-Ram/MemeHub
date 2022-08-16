@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components';
 import FaceIcon from '@mui/icons-material/Face';
 import LocationSearchingIcon from '@mui/icons-material/LocationSearching';
+import { Link } from 'react-router-dom';
 
 
 const Container = styled.div`
@@ -65,10 +66,12 @@ function Navbar() {
           <Input placeholder="Search" />
           <LocationSearchingIcon />
         </Search>
+        <Link to="login" style={{textDecoration: "none"}}>
         <Button>
           <FaceIcon />
           Sign In
         </Button>
+        </Link>
       </Wrapper>
     </Container>
   )
