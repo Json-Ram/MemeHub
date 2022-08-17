@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components';
-import FaceIcon from '@mui/icons-material/Face';
-import LocationSearchingIcon from '@mui/icons-material/LocationSearching';
+import FingerprintIcon from '@mui/icons-material/Fingerprint';
 import { Link } from 'react-router-dom';
+import SearchIcon from '@mui/icons-material/Search';
 
 
 const Container = styled.div`
@@ -31,9 +31,9 @@ const Search = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 5px;
-  border: 1.5px solid grey;
+  border: 1.5px solid #2ba81a;
   border-radius: 3px;
-  color: ${({theme}) =>theme.text};
+  color: ${({ theme }) => theme.text};
 `;
 
 const Input = styled.input`
@@ -42,13 +42,17 @@ const Input = styled.input`
   outline: none;
   color: ${({ theme }) => theme.text};
   width: 100%;
+
+  ::placeholder {
+    color: ${({ theme }) => theme.text};
+  }
 `;
 
 const Button = styled.button`
   padding: 5px 15px;
   background-color: transparent;
-  border: 1px solid orange;
-  color: orange;
+  border: 1px solid #2ba81a;
+  color: #2ba81a;
   border-radius: 3px;
   font-weight: 500;
   cursor: pointer;
@@ -64,11 +68,11 @@ function Navbar() {
       <Wrapper>
         <Search>
           <Input placeholder="Search" />
-          <LocationSearchingIcon />
+          <SearchIcon />
         </Search>
         <Link to="login" style={{textDecoration: "none"}}>
         <Button>
-          <FaceIcon />
+          <FingerprintIcon />
           Sign In
         </Button>
         </Link>

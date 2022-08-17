@@ -93,16 +93,16 @@ const ChannelCounter = styled.span`
   margin-top: 5px;
   margin-bottom: 5px;
   color: ${({ theme }) => theme.textSoft};
-  font-size: 10px;
+  font-size: 12px;
 `;
 
 const Description = styled.p`
-  font-size: 12px;
+  font-size: 14px;
 `;
 
 
 const Subscribe = styled.button`
-  background-color: orange;
+  background-color: #2ba81a;
   font-weight: 500;
   color: white;
   border: none;

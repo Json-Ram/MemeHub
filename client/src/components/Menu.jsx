@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import ApartmentIcon from '@mui/icons-material/Apartment';
-import FaceIcon from '@mui/icons-material/Face';
-import DirectionsRunIcon from '@mui/icons-material/DirectionsRun';
 import TravelExploreIcon from '@mui/icons-material/TravelExplore';
 import SubscriptionsIcon from '@mui/icons-material/Subscriptions';
 import HistoryIcon from '@mui/icons-material/History';
@@ -12,6 +10,8 @@ import FlagIcon from '@mui/icons-material/Flag';
 import ContactSupportIcon from '@mui/icons-material/ContactSupport';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import { Link } from 'react-router-dom';
+import LogoImg from "../img/memefrog1.png";
+import FingerprintIcon from '@mui/icons-material/Fingerprint';
 
 const Container = styled.div`
   flex: 1;
@@ -31,13 +31,18 @@ const Logo = styled.div`
   display: flex;
   align-items: center;
   gap: 5px;
+  font-family: "Lily Script One";
   font-weight: bold;
   margin-bottom: 25px;
   font-size: 22px;
+  color: #2ba81a;
+
 `;
 
-const Img = styled.div`
-  height: 25px;
+const Img = styled.img`
+  height: 35px;
+  width: 35px;
+  background: transparent;
 `;
 
 const Item = styled.div`
@@ -65,8 +70,8 @@ const Login = styled.div`
 const Button = styled.button`
   padding: 5px 15px;
   background-color: transparent;
-  border: 1px solid orange;
-  color: orange;
+  border: 1px solid #2ba81a;
+  color: #2ba81a;
   border-radius: 3px;
   font-weight: 500;
   margin-top: 10px;
@@ -83,9 +88,8 @@ const Menu = ({darkMode, setDarkMode}) => {
       <Wrapper>
       <Link to="/" style={{textDecoration:"none", color:"inherit"}}>
         <Logo>
-          <Img src=""/>
-          <DirectionsRunIcon />
-          MemeHub
+          <Img src={LogoImg}/>
+          MemeFrog
         </Logo>
         </Link>
         <Link to="/" style={{textDecoration:"none", color:"inherit"}}>
@@ -115,7 +119,7 @@ const Menu = ({darkMode, setDarkMode}) => {
           Sign in to like videos, comment and subscribe.
           <Link to="login" style={{textDecoration: "none"}}>
           <Button>
-            <FaceIcon />
+            <FingerprintIcon />
             Sign In
           </Button>
           </Link>
