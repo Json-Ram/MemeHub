@@ -25,8 +25,8 @@ const Details = styled.div`
 `;
 
 const ChannelImage = styled.img`
-  width: 36px;
-  height: 36px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   background-color: grey;
   object-fit: cover;
@@ -38,19 +38,19 @@ const Text = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 11px;
+  font-size: 16px;
   font-weight: 500;
   color: ${({ theme }) => theme.text};
 `;
 
 const ChannelName = styled.h2`
-  font-size: 10px;
+  font-size: 14px;
   color: ${({ theme }) => theme.textSoft};
   margin: 2px 0px;
 `;
 
 const Info = styled.div`
-  font-size: 8px;
+  font-size: 12px;
   color: ${({ theme }) => theme.textSoft};
 
 `;

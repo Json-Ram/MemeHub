@@ -33,6 +33,7 @@ const Logo = styled.div`
   gap: 5px;
   font-weight: bold;
   margin-bottom: 25px;
+  font-size: 22px;
 `;
 
 const Img = styled.div`
@@ -45,6 +46,7 @@ const Item = styled.div`
   gap: 20px;
   cursor: pointer;
   padding: 7.5px 0px;
+  font-size: 16px;
 
   &:hover {
     background-color: ${({ theme }) => theme.soft};
@@ -74,12 +76,6 @@ const Button = styled.button`
   gap: 5px;
 `;
 
-//const Title = styled.h2`
-//  font-size: 12px;
-//  font-weight: 500;
-//  color: #aaaaaa;
-//  margin-bottm: 20px;
-//`;
 
 const Menu = ({darkMode, setDarkMode}) => {
   return (
