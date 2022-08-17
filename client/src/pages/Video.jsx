@@ -6,6 +6,7 @@ import QuickreplyIcon from '@mui/icons-material/Quickreply';
 import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd';
 import Comments from '../components/Comments';
 import Card from '../components/Card';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 const Container = styled.div`
   display: flex;
@@ -133,8 +134,7 @@ const Video = () => {
           <Info> 7,045,349 views ~ Aug 11, 2022</Info>
           <Buttons>
             <Button><ThumbUpIcon /> 12K</Button>
-            <Button><ThumbDownIcon />Dislike</Button>
-            <Button><QuickreplyIcon />Comment</Button>
+            <Button><DeleteIcon />Dislike</Button>
             <Button><PlaylistAddIcon />Save</Button>
           </Buttons>
         </Details>
@@ -143,7 +143,7 @@ const Video = () => {
           <ChannelInfo>
             <ChannelImage src="https://images.unsplash.com/photo-1593104547489-5cfb3839a3b5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1153&q=80"/>
             <ChannelDetails>
-            <ChannelName>Sarah Lambert</ChannelName>
+            <ChannelName>Farah Yambert</ChannelName>
             <ChannelCounter>755K Subscribers</ChannelCounter>
             <Description>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas fugit nemo rem voluptate, vero dolores iste. Et voluptates nisi, minima quaerat ipsa autem deserunt, accusamus dolore rem voluptas itaque. Perspiciatis!

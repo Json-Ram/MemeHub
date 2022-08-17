@@ -45,8 +45,8 @@ const Button = styled.button`
   margin-top: 5px;
   cursor: pointer;
   font-weight: 500;
-  background-color: ${({ theme }) => theme.soft};
-  color: ${({ theme }) => theme.textSoft};
+  background-color: #2ba81a;
+  color: white;
 `;
 
 const MoreInfo = styled.div`
@@ -70,7 +70,7 @@ const Login = () => {
     <Container>
       <Wrapper>
         <Title>Sign in</Title>
-        <SubTitle> to continue to MemeHub</SubTitle>
+        <SubTitle> to continue to MemeFrog</SubTitle>
         <Input placeholder="Username" />
         <Input type="password" placeholder="Password" />
         <Button>Sign In</Button>

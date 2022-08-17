@@ -1,12 +1,14 @@
 import styled, { ThemeProvider } from "styled-components";
 import Menu from "./components/Menu";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import { darkTheme, lightTheme } from "./utils/Theme.js";
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Video from "./pages/Video";
 import Login from "./pages/Login";
+
 
 const Container = styled.div`
   display: flex;
@@ -42,6 +44,7 @@ function App() {
             </Route>
           </Routes>
         </Wrapper>
+        <Footer />
       </Main>
       </BrowserRouter>
     </Container>
