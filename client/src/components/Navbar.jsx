@@ -73,7 +73,7 @@ function Navbar() {
         <Link to="login" style={{textDecoration: "none"}}>
         <Button>
           <FingerprintIcon />
-          Sign In
+          Log In
         </Button>
         </Link>
       </Wrapper>

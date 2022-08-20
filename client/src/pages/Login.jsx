@@ -16,12 +16,13 @@ const Wrapper = styled.div`
   flex-direction: column;
   background-color: ${({ theme }) => theme.bgLighter};
   border: 1px solid ${({ theme }) => theme.soft};
-  padding: 20px 50px;
+  padding: 20px 70px;
   gap: 10px;
 `;
 
 const Title = styled.h1`
   font-size: 24px;
+  justify-content: center;
 `;
 
 const SubTitle = styled.h2`
@@ -64,16 +65,27 @@ const Link = styled.span`
   margin-left: 30px;
 `;
 
+const Logo = styled.h1`
+  font-family: "Lily Script One";
+  font-size: 30px;
+  color: #2ba81a;
+`;
+
 
 const Login = () => {
   return (
     <Container>
       <Wrapper>
-        <Title>Sign in</Title>
-        <SubTitle> to continue to MemeFrog</SubTitle>
+        <Title>Log In</Title>
+        <Title>
+          to
+        </Title>
+        <Logo>
+          MemeFrog
+        </Logo>
         <Input placeholder="Username" />
         <Input type="password" placeholder="Password" />
-        <Button>Sign In</Button>
+        <Button>Log In</Button>
         <Title>or</Title>
         <Input placeholder="Username" />
         <Input placeholder="Email" />

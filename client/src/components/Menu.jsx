@@ -116,11 +116,11 @@ const Menu = ({darkMode, setDarkMode}) => {
         </Item>
         <Hr />
         <Login>
-          Sign in to like videos, comment and subscribe.
+          Log In to like videos, comment and subscribe.
           <Link to="login" style={{textDecoration: "none"}}>
           <Button>
             <FingerprintIcon />
-            Sign In
+            Log In
           </Button>
           </Link>
         </Login>

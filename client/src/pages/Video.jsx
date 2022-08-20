@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import ThumbUpIcon from '@mui/icons-material/ThumbUp';
-import ThumbDownIcon from '@mui/icons-material/ThumbDown';
-import QuickreplyIcon from '@mui/icons-material/Quickreply';
 import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd';
 import Comments from '../components/Comments';
 import Card from '../components/Card';
@@ -120,7 +118,7 @@ const Video = () => {
       <Content>
         <VideoWrapper>
         <iframe 
-          width="1000" 
+          width="900" 
           height="500" 
           src="https://www.youtube.com/embed/qsfISQIZt9A?list=PLSzdkW8i2By_7DRe18oyQDecbc-k7X2Mt" 
           title="Scooby Doo Where Are You! 1 4   Hassle In The Castle" 

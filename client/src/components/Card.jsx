@@ -3,25 +3,28 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Container = styled.div`
-  width: ${(props) => props.type !== "sm" && "331px"};
+  width: ${(props) => props.type !== "sm" && "600px"};
   margin: ${(props) => props.type === "sm" ? "10px" : "20px"};
   cursor: pointer;
   display: ${(props) => props.type === "sm" && "flex"};
   gap: 10px;
+  background-color: ${({theme}) => theme.bgLighter};
+  padding: 10px;
 `;
 
 const Image = styled.img`
-  width: 100%;
-  height: ${(props) => props.type === "sm" ? "120px" : "202px"};
-  background-color: grey;
-  flex: 1;
+  width: 90%;
+  height: ${(props) => props.type === "sm" ? "120px" : "auto"};
+  padding-left: 5%;
+  padding-top: 5%;
 `;
 
 const Details = styled.div`
   display: flex;
   margin-top: ${(props) => props.type !== "sm" && "16px"};
   gap: 12px;
-  flex: 1;
+  padding-left: 5%;
+  padding-bottom: 2%;
 `;
 
 const ChannelImage = styled.img`
@@ -52,7 +55,6 @@ const ChannelName = styled.h2`
 const Info = styled.div`
   font-size: 12px;
   color: ${({ theme }) => theme.textSoft};
-
 `;
 
 
