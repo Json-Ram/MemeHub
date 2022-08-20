@@ -31,12 +31,16 @@ const SubTitle = styled.h2`
 `;
 
 const Input = styled.input`
-  border: 1px solid ${({ theme }) => theme.soft};
+  border: 2px solid ${({ theme }) => theme.soft};
   border-radius: 3px;
   padding: 10px;
   background-color: transparent;
   width: 100%;
   color: ${({ theme }) => theme.text};
+
+  :focus {
+    border:1.5px solid #2ba81a;
+  }
 `;
 
 const Button = styled.button`

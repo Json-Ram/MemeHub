@@ -21,10 +21,10 @@ const VideoWrapper = styled.div`
 `;
 
 const Title = styled.div`
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
-  margin-top: 20px;
-  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 5px;
   color: ${({ theme }) => theme.text};
 `;
 
@@ -36,6 +36,7 @@ const Details = styled.div`
 
 const Info = styled.span`
   color: ${({ theme }) => theme.textSoft};
+  font-size: 12px;
 `;
 
 const Buttons = styled.div`
@@ -49,7 +50,7 @@ const Button = styled.div`
   align-items: center;
   gap: 5px;
   cursor: pointer;
-  
+  font-size: 14px;
 `;
 
 const Hr = styled.hr`

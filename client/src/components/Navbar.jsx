@@ -31,9 +31,17 @@ const Search = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 5px;
-  border: 1.5px solid #2ba81a;
+  border: 1.5px solid ${({ theme }) => theme.bg};
   border-radius: 3px;
   color: ${({ theme }) => theme.text};
+
+  &:hover {
+    border:1.5px solid #2ba81a;
+  }
+
+  :focus-within {
+    border:1.5px solid #2ba81a;
+  }
 `;
 
 const Input = styled.input`
@@ -50,9 +58,9 @@ const Input = styled.input`
 
 const Button = styled.button`
   padding: 5px 15px;
-  background-color: transparent;
-  border: 1px solid #2ba81a;
-  color: #2ba81a;
+  background-color: #2ba81a;
+  border: none;
+  color: white;
   border-radius: 3px;
   font-weight: 500;
   cursor: pointer;
@@ -67,8 +75,8 @@ function Navbar() {
     <Container>
       <Wrapper>
         <Search>
-          <Input placeholder="Search" />
           <SearchIcon />
+          <Input placeholder="Search for Memes" />
         </Search>
         <Link to="login" style={{textDecoration: "none"}}>
         <Button>

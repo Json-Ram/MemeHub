@@ -48,30 +48,30 @@ const Img = styled.img`
 const Item = styled.div`
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
   cursor: pointer;
-  padding: 7.5px 0px;
-  font-size: 16px;
+  padding: 7.5px;
+  font-size: 12px;
 
   &:hover {
-    background-color: ${({ theme }) => theme.soft};
+    background-color: ${({ theme }) => theme.bg};
   }
 `;
 
 const Hr = styled.div`
   margin: 15px 0px;
-  border: 0.5px solid ${({theme}) =>theme.soft};
+  border: 2px solid ${({theme}) =>theme.soft};
 `;
 
 const Login = styled.div`
-
+  padding: 7.5px;
 `;
 
 const Button = styled.button`
   padding: 5px 15px;
-  background-color: transparent;
-  border: 1px solid #2ba81a;
-  color: #2ba81a;
+  background-color: #2ba81a;
+  border: none;
+  color: white;
   border-radius: 3px;
   font-weight: 500;
   margin-top: 10px;

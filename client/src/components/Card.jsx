@@ -41,13 +41,13 @@ const Text = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   color: ${({ theme }) => theme.text};
 `;
 
 const ChannelName = styled.h2`
-  font-size: 14px;
+  font-size: 12px;
   color: ${({ theme }) => theme.textSoft};
   margin: 2px 0px;
 `;
