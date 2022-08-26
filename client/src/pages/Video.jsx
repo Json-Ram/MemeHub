@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import ThumbUpIcon from '@mui/icons-material/ThumbUp';
+import LocalFireDepartmentIcon from '@mui/icons-material/LocalFireDepartment';
 import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd';
 import Comments from '../components/Comments';
 import Card from '../components/Card';
 import DeleteIcon from '@mui/icons-material/Delete';
+import IosShareIcon from '@mui/icons-material/IosShare';
 
 const Container = styled.div`
   display: flex;
@@ -47,7 +48,7 @@ const Buttons = styled.div`
 
 const Button = styled.div`
   display: flex;
-  align-items: center;
+  align-items: end;
   gap: 5px;
   cursor: pointer;
   font-size: 14px;
@@ -121,8 +122,8 @@ const Video = () => {
         <iframe 
           width="900" 
           height="500" 
-          src="https://www.youtube.com/embed/qsfISQIZt9A?list=PLSzdkW8i2By_7DRe18oyQDecbc-k7X2Mt" 
-          title="Scooby Doo Where Are You! 1 4   Hassle In The Castle" 
+          src="https://www.youtube.com/embed/iM9LmegXthY" 
+          title="Scooby-Doo! | Shaggy and Scooby's Best Moments!"
           frameborder="0" 
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
           allowfullscreen
@@ -132,9 +133,10 @@ const Video = () => {
         <Details>
           <Info> 7,045,349 views ~ Aug 11, 2022</Info>
           <Buttons>
-            <Button><ThumbUpIcon /> 12K</Button>
+            <Button><LocalFireDepartmentIcon /> 12K</Button>
             <Button><DeleteIcon />Dislike</Button>
             <Button><PlaylistAddIcon />Save</Button>
+            <Button><IosShareIcon />Share</Button>
           </Buttons>
         </Details>
         <Hr />

@@ -1,6 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import LocalFireDepartmentIcon from '@mui/icons-material/LocalFireDepartment';
+import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd';
+import DeleteIcon from '@mui/icons-material/Delete';
+import IosShareIcon from '@mui/icons-material/IosShare';
+
 
 const Container = styled.div`
   width: ${(props) => props.type !== "sm" && "600px"};
@@ -57,6 +62,22 @@ const Info = styled.div`
   color: ${({ theme }) => theme.textSoft};
 `;
 
+const Buttons = styled.div`
+  display: ${(props) => props.type === "sm" ? "none" : "flex"};
+  gap: 10px;
+  margin-left: 8%;
+  color: ${({ theme }) => theme.text};
+  align-items: start;
+`;
+
+const Button = styled.div`
+  display: flex;
+  align-items: end;
+  gap: 5px;
+  cursor: pointer;
+  font-size: 14px;
+`;
+
 
 
 const Card = ({ type }) => {
@@ -71,6 +92,12 @@ const Card = ({ type }) => {
           <ChannelName> Zarah Hambert</ChannelName>
           <Info>69 views ~ 54 mins ago</Info>
         </Text>
+        <Buttons type={type}>
+            <Button><LocalFireDepartmentIcon /> 12K</Button>
+            <Button><DeleteIcon />Dislike</Button>
+            <Button><PlaylistAddIcon />Save</Button>
+            <Button><IosShareIcon />Share</Button>
+          </Buttons>
       </Details>
     </Container>
     </Link>
