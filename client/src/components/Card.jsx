@@ -5,6 +5,7 @@ import LocalFireDepartmentIcon from '@mui/icons-material/LocalFireDepartment';
 import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd';
 import DeleteIcon from '@mui/icons-material/Delete';
 import IosShareIcon from '@mui/icons-material/IosShare';
+import { format } from "timeago.js";
 
 
 const Container = styled.div`
@@ -80,17 +81,21 @@ const Button = styled.div`
 
 
 
-const Card = ({ type }) => {
+const Card = ({ type, video }) => {
+
   return (
     <Link to="/video/test" style={{textDecoration:"none"}}>
     <Container type={type}>
-      <Image type={type} src="https://images.unsplash.com/photo-1485846234645-a62644f84728?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1159&q=80"/>
+      <Image 
+      type={type}
+      src={video.imgUrl}
+      />
       <Details type={type}>
         <ChannelImage type={type} src="https://images.unsplash.com/photo-1593104547489-5cfb3839a3b5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1153&q=80"/>
         <Text>
-          <Title>Scooby Doo: Season 1</Title>
+          <Title>{video.title}</Title>
           <ChannelName> Zarah Hambert</ChannelName>
-          <Info>69 views ~ 54 mins ago</Info>
+          <Info>{video.views} ~ {format(video.createdAt)}</Info>
         </Text>
         <Buttons type={type}>
             <Button><LocalFireDepartmentIcon /> 12K</Button>

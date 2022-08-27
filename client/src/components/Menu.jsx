@@ -98,14 +98,18 @@ const Menu = ({darkMode, setDarkMode}) => {
           Home
         </Item>
         </Link>
-        <Item>
-          <TravelExploreIcon />
-          Explore
-        </Item>
-        <Item>
-          <SubscriptionsIcon />
-          Subscriptions
-        </Item>
+        <Link to="trending" style={{textDecoration: "none", color:"inherit"}}>
+          <Item>
+            <TravelExploreIcon />
+            Explore
+          </Item>
+        </Link>
+        <Link to="subscribed" style={{textDecoration: "none", color:"inherit"}}>
+          <Item>
+            <SubscriptionsIcon />
+            Subscriptions
+          </Item>
+        </Link>
         <Item>
           <HistoryIcon />
           History
